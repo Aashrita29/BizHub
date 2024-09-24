@@ -1,0 +1,443 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Dashboard
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: 'Roboto', sans-serif;
+        }
+  </style>
+ </head>
+ <body class="bg-blue-950">
+  <header class="bg-red-600 p-4 flex justify-between items-center">
+   <div class="flex items-center">
+    <input class="ml-4 p-2 rounded" placeholder="Search" type="text"/>
+   </div>
+   <nav class="flex items-center space-x-4 text-white">
+    <a class="hover:underline" href="#">
+     Home
+    </a>
+    <a class="hover:underline" href="#">
+     Companies
+    </a>
+    <a class="hover:underline" href="#">
+     Projects
+    </a>
+    <a class="hover:underline" href="#">
+     Profiles
+    </a>
+    <a class="hover:underline" href="#">
+     Jobs
+    </a>
+    <a class="hover:underline" href="#">
+     Messages
+    </a>
+    <a class="hover:underline" href="#">
+     Notification
+    </a>
+    <div class="flex items-center">
+     <img alt="User profile picture" class="rounded-full" height="30" src="" width="30"/>
+     <span class="ml-2">
+      User1
+     </span>
+    </div>
+   </nav>
+  </header>
+  <div class="container mx-auto mt-4 flex bg-blue-950">
+   <aside class="w-1/4 p-4">
+    <div class="bg-white p-4 rounded shadow">
+     <div class="text-center">
+      <img alt="Profile picture" class="rounded-full mx-auto" height="100" src="" width="100"/>
+      <h2 class="mt-2 text-xl font-bold text-black">
+       User1
+      </h2>
+      <p class="text-gray-600">
+       Graphic Designer at Self Employed
+      </p>
+     </div>
+     <div class="mt-4 text-center text-black">
+      <p>
+       Following
+      </p>
+      <p class="font-bold">
+       34
+      </p>
+      <p>
+       Followers
+      </p>
+      <p class="font-bold">
+       155
+      </p>
+      <button class="mt-2 bg-red-600 text-white py-1 px-4 rounded">
+       View Profile
+      </button>
+     </div>
+    </div>
+    <div class="bg-white p-4 rounded shadow mt-4">
+     <h3 class="font-bold text-black">
+      Suggestions
+     </h3>
+     <ul class="mt-2">
+      <li class="flex items-center justify-between mt-2">
+       <div class="flex items-center">
+        <img alt="Profile picture" class="rounded-full" height="30" src="" width="30"/>
+        <div class="ml-2">
+         <p class="font-bold text-black">
+          User2
+         </p>
+         <p class="text-gray-600 text-sm">
+          Graphic Designer
+         </p>
+        </div>
+       </div>
+       <button class="bg-gray-200 p-1 rounded">
+        +
+       </button>
+      </li>
+      <li class="flex items-center justify-between mt-2">
+       <div class="flex items-center">
+        <img alt="Profile picture" class="rounded-full" height="30" src="" width="30"/>
+        <div class="ml-2">
+         <p class="font-bold text-black">
+          User1
+         </p>
+         <p class="text-gray-600 text-sm">
+          PHP Developer
+         </p>
+        </div>
+       </div>
+       <button class="bg-gray-200 p-1 rounded">
+        +
+       </button>
+      </li>
+      <li class="flex items-center justify-between mt-2">
+       <div class="flex items-center">
+        <img alt="Profile picture" class="rounded-full" height="30" src="" width="30"/>
+        <div class="ml-2">
+         <p class="font-bold text-black">
+          User3
+         </p>
+         <p class="text-gray-600 text-sm">
+          Wordpress Developer
+         </p>
+        </div>
+       </div>
+       <button class="bg-gray-200 p-1 rounded">
+        +
+       </button>
+      </li>
+      <li class="flex items-center justify-between mt-2">
+       <div class="flex items-center">
+        <img alt="Profile picture" class="rounded-full" height="30" src="" width="30"/>
+        <div class="ml-2">
+         <p class="font-bold text-black">
+          User4
+         </p>
+         <p class="text-gray-600 text-sm">
+          C &amp; C++ Developer
+         </p>
+        </div>
+       </div>
+       <button class="bg-gray-200 p-1 rounded">
+        +
+       </button>
+      </li>
+      <li class="flex items-center justify-between mt-2">
+       <div class="flex items-center">
+        <img alt="Profile picture" class="rounded-full" height="30" src="" width="30"/>
+        <div class="ml-2">
+         <p class="font-bold text-black">
+          User2
+         </p>
+         <p class="text-gray-600 text-sm">
+          Graphic Designer
+         </p>
+        </div>
+       </div>
+       <button class="bg-gray-200 p-1 rounded">
+        +
+       </button>
+      </li>
+      <li class="flex items-center justify-between mt-2">
+       <div class="flex items-center">
+        <img alt="Profile picture" class="rounded-full" height="30" src="" width="30"/>
+        <div class="ml-2">
+         <p class="font-bold text-black">
+          User1
+         </p>
+         <p class="text-gray-600 text-sm">
+          PHP Developer
+         </p>
+        </div>
+       </div>
+       <button class="bg-gray-200 p-1 rounded">
+        +
+       </button>
+      </li>
+     </ul>
+     <button class="mt-4 text-red-600">
+      View More
+     </button>
+    </div>
+   </aside>
+   <main class="w-1/2 p-4">
+    <div class="bg-white p-4 rounded shadow">
+     <div class="flex justify-between items-center">
+      <div class="flex items-center">
+       <img alt="Profile picture" class="rounded-full" height="50" src="" width="50"/>
+       <div class="ml-2">
+        <h3 class="font-bold text-black">
+         User1
+        </h3>
+        <p class="text-gray-600 text-sm">
+         3 min ago
+        </p>
+       </div>
+      </div>
+      <div class="flex space-x-2">
+       <button class="bg-gray-200 p-2 rounded">
+        <i class="fas fa-ellipsis-h">
+        </i>
+       </button>
+       <button class="bg-gray-200 p-2 rounded">
+        <i class="fas fa-envelope">
+        </i>
+       </button>
+       <button class="bg-gray-200 p-2 rounded">
+        <i class="fas fa-bell">
+        </i>
+       </button>
+      </div>
+     </div>
+     <div class="mt-4">
+      <h4 class="font-bold text-black">
+       Senior Wordpress Developer
+      </h4>
+      <div class="flex items-center space-x-2 mt-2">
+       <span class="bg-blue-500 text-white py-1 px-2 rounded text-xs">
+        Full Time
+       </span>
+       <span class="bg-gray-200 py-1 px-2 rounded text-xs">
+        $30 / hr
+       </span>
+      </div>
+      <p class="mt-2 text-gray-600">
+       description
+      </p>
+      <button class="mt-2 text-red-600">
+       view more
+      </button>
+     </div>
+     <div class="mt-4 flex space-x-2">
+      <span class="bg-gray-200 py-1 px-2 rounded text-xs">
+       HTML
+      </span>
+      <span class="bg-gray-200 py-1 px-2 rounded text-xs">
+       PHP
+      </span>
+      <span class="bg-gray-200 py-1 px-2 rounded text-xs">
+       CSS
+      </span>
+      <span class="bg-gray-200 py-1 px-2 rounded text-xs">
+       Javascript
+      </span>
+      <span class="bg-gray-200 py-1 px-2 rounded text-xs">
+       Wordpress
+      </span>
+     </div>
+     <div class="mt-4 flex justify-between items-center">
+      <div class="flex items-center space-x-2">
+       <button class="flex items-center space-x-1 text-gray-600">
+        <i class="fas fa-thumbs-up">
+        </i>
+        <span>
+         Like
+        </span>
+       </button>
+       <button class="flex items-center space-x-1 text-gray-600">
+        <i class="fas fa-comment">
+        </i>
+        <span>
+         Comment
+        </span>
+       </button>
+      </div>
+      <span class="text-gray-600">
+       Views 50
+      </span>
+     </div>
+    </div>
+    <div class="bg-white p-4 rounded shadow mt-4">
+     <h3 class="font-bold text-black">
+      Top Profiles
+     </h3>
+     <div class="flex space-x-4 mt-4">
+      <div class="text-center">
+       <img alt="Profile picture" class="rounded-full mx-auto" height="50" src="" width="50"/>
+       <h4 class="mt-2 font-bold text-black">
+        User1
+       </h4>
+       <p class="text-gray-600 text-sm">
+        Graphic Designer
+       </p>
+       <div class="mt-2 flex space-x-2 justify-center">
+        <button class="bg-gray-200 py-1 px-2 rounded">
+         Follow
+        </button>
+        <button class="bg-blue-500 text-white py-1 px-2 rounded">
+         Hire
+        </button>
+       </div>
+      </div>
+      <div class="text-center">
+       <img alt="Profile picture" class="rounded-full mx-auto" height="50" src="" width="50"/>
+       <h4 class="mt-2 font-bold text-black">
+        User1
+       </h4>
+       <p class="text-gray-600 text-sm">
+        Graphic Designer
+       </p>
+       <div class="mt-2 flex space-x-2 justify-center">
+        <button class="bg-gray-200 py-1 px-2 rounded">
+         Follow
+        </button>
+        <button class="bg-blue-500 text-white py-1 px-2 rounded">
+         Hire
+        </button>
+       </div>
+      </div>
+      <div class="text-center">
+       <img alt="Profile picture" class="rounded-full mx-auto" height="50" src="" width="50"/>
+       <h4 class="mt-2 font-bold text-black">
+        User1
+       </h4>
+       <p class="text-gray-600 text-sm">
+        Graphic Designer
+       </p>
+       <div class="mt-2 flex space-x-2 justify-center">
+        <button class="bg-gray-200 py-1 px-2 rounded">
+         Follow
+        </button>
+        <button class="bg-blue-500 text-white py-1 px-2 rounded">
+         Hire
+        </button>
+       </div>
+      </div>
+     </div>
+    </div>
+   </main>
+   <aside class="w-1/4 p-4">
+    <div class="bg-white p-4 rounded shadow">
+     <h3 class="font-bold text-black">
+      Track Time on Workwise
+     </h3>
+     <p class="mt-2 text-gray-600">
+      Pay only for the Hours worked
+     </p>
+     <button class="mt-2 bg-red-600 text-white py-1 px-4 rounded">
+      SIGN UP
+     </button>
+     <button class="mt-2 text-red-600">
+      Learn More
+     </button>
+    </div>
+    <div class="bg-white p-4 rounded shadow mt-4">
+     <h3 class="font-bold text-black">
+      Top Jobs
+     </h3>
+     <ul class="mt-2">
+      <li class="mt-2">
+       <h4 class="font-bold text-black">
+        Senior Product Designer
+       </h4>
+       <p class="text-gray-600 text-sm">
+        description
+       </p>
+       <p class="font-bold text-black">
+        $25/hr
+       </p>
+      </li>
+      <li class="mt-2">
+       <h4 class="font-bold text-black">
+        Senior UI / UX Designer
+       </h4>
+       <p class="text-gray-600 text-sm">
+        description
+       </p>
+       <p class="font-bold text-black">
+        $25/hr
+       </p>
+      </li>
+      <li class="mt-2">
+       <h4 class="font-bold text-black">
+        Junior Seo Designer
+       </h4>
+       <p class="text-gray-600 text-sm">
+        description
+       </p>
+       <p class="font-bold text-black">
+        $25/hr
+       </p>
+      </li>
+      <li class="mt-2">
+       <h4 class="font-bold text-black">
+        Senior PHP Designer
+       </h4>
+       <p class="text-gray-600 text-sm">
+        description
+       </p>
+       <p class="font-bold text-black">
+        $25/hr
+       </p>
+      </li>
+      <li class="mt-2">
+       <h4 class="font-bold text-black">
+        Senior Developer Designer
+       </h4>
+       <p class="text-gray-600 text-sm">
+        description
+       </p>
+       <p class="font-bold text-black">
+        $25/hr
+       </p>
+      </li>
+     </ul>
+    </div>
+    <div class="bg-white p-4 rounded shadow mt-4">
+     <h3 class="font-bold text-black">
+      Most Viewed This Week
+     </h3>
+     <div class="flex mt-2">
+      <img alt="Profile picture" class="rounded-full" height="50" src="" width="50"/>
+      <div class="ml-2">
+       <h4 class="font-bold text-black">
+        Senior Product Designer
+       </h4>
+       <p class="text-gray-600 text-sm">
+        $25/hr
+       </p>
+      </div>
+     </div>
+     <div class="flex mt-2">
+      <img alt="Profile picture" class="rounded-full" height="50" src="" width="50"/>
+      <div class="ml-2">
+       <h4 class="font-bold text-black">
+        Senior UI / UX Designer
+       </h4>
+       <p class="text-gray-600 text-sm">
+        $25/hr
+       </p>
+      </div>
+     </div>
+    </div>
+   </aside>
+  </div>
+ </body>
+</html>

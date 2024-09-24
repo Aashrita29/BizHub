@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 flex items-center justify-center min-h-screen">
+    <div class="absolute top-0 left-0 w-full p-4 flex justify-between text-red-500">
+        <div class="space-x-4">
+            <a href="#" class="hover:underline">HOME</a>
+            <a href="#" class="hover:underline">ABOUT</a>
+            <a href="#" class="hover:underline">CONTACT</a>
+        </div>
+        <div class="space-x-4">
+            <a href="#" class="hover:underline">Login</a>
+            <a href="#" class="hover:underline">Sign Up</a>
+        </div>
+    </div>
+    <div class="bg-gray-100 p-8 rounded-lg shadow-lg w-full max-w-md">
+        <h2 class="text-2xl font-bold mb-2 text-center">Welcome to BizHub</h2>
+        <p class="text-center mb-6">Connect with friends and the world around you.</p>
+        
+        <div class="mb-6">
+            <h3 class="text-lg font-bold mb-2">Login</h3>
+            <form id="loginForm">
+                <div class="mb-4">
+                    <label class="block text-gray-700">Username</label>
+                    <input type="text" id="loginUsername" placeholder="Enter your username" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500">
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700">Password</label>
+                    <input type="password" id="loginPassword" placeholder="Enter your password" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500">
+                </div>
+                <button type="submit" class="w-full bg-red-500 text-white py-2 rounded-lg hover:bg-red-600">Login</button>
+                <p id="loginError" class="text-red-500 text-sm mt-1 hidden">Invalid username or password</p>
+                <a href="homepage.html" class="text-blue-500 hover:underline">Go to Homepage</a>
+            </form>
+        </div>
+        
+        <hr class="my-6">
+        
+        <p class="text-center mb-6">Don't have an account?</p>
+        
+        <div>
+            <h3 class="text-lg font-bold mb-2">Sign Up</h3>
+            <form id="signupForm">
+                <div class="mb-4">
+                    <label class="block text-gray-700">Email</label>
+                    <input type="email" id="signupEmail" placeholder="Enter your email" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500">
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700">Username</label>
+                    <input type="text" id="signupUsername" placeholder="Enter your username" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500">
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700">Password</label>
+                    <input type="password" id="signupPassword" placeholder="Enter your password" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500">
+                    <p id="passwordError" class="text-red-500 text-sm mt-1 hidden">The password must contain minimum 8 characters</p>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700">Confirm Password</label>
+                    <input type="password" id="confirmPassword" placeholder="Confirm your password" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500">
+                    <p id="confirmPasswordError" class="text-red-500 text-sm mt-1 hidden">The password does not match</p>
+                </div>
+                <button type="submit" class="w-full bg-red-500 text-white py-2 rounded-lg hover:bg-red-600">Sign Up</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('signupForm').addEventListener('submit', function(event) {
+            const email = document.getElementById('signupEmail').value;
+            const username = document.getElementById('signupUsername').value;
+            const password = document.getElementById('signupPassword').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            const passwordError = document.getElementById('passwordError');
+            const confirmPasswordError = document.getElementById('confirmPasswordError');
+            
+            let valid = true;
+
+            if (password.length < 8) {
+                event.preventDefault();
+                passwordError.classList.remove('hidden');
+                valid = false;
+            } else {
+                passwordError.classList.add('hidden');
+            }
+
+            if (password !== confirmPassword) {
+                event.preventDefault();
+                confirmPasswordError.classList.remove('hidden');
+                valid = false;
+            } else {
+                confirmPasswordError.classList.add('hidden');
+            }
+
+            if (valid) {
+                const credentials = {
+                    email: email,
+                    username: username,
+                    password: password
+                };
+                localStorage.setItem('credentials', JSON.stringify(credentials));
+                alert('Sign up successful!');
+            }
+
+            return valid;
+        });
+
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const username = document.getElementById('loginUsername').value;
+            const password = document.getElementById('loginPassword').value;
+            const loginError = document.getElementById('loginError');
+
+            const storedCredentials = JSON.parse(localStorage.getItem('credentials'));
+
+            if (storedCredentials && storedCredentials.username === username && storedCredentials.password === password) {
+                alert('Login successful!');
+                window.location.href = 'homepage.html';
+            } else {
+                loginError.classList.remove('hidden');
+            }
+        });
+    </script>
+</body>
+</html>
